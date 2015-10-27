@@ -1,0 +1,111 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false" title="RingCentral Support Portal Learning Center" docType="html-5.0" controller="RCSupportControllerHandler" >
+    <apex:composition template="RCSupportPortalHomeTemplate">
+     <apex:define name="systemstatus">
+          <section class="main-content">
+            <c:RCSystemStatus Text="Learning Center" iconcode="icon-learning-center" />            
+          </section>  
+        </apex:define>
+        <apex:define name="searchcomponent">
+            <!--  REPLACING SEARCH CODE WITH SEARCH COMPONENT c:RCSupportPortalSearchcomponent-->
+                <c:RCSupportPortalSearchComponent ln="{!ln}" searchtext="Search learning center resources"/>
+            <!--  -->
+        </apex:define>
+        <apex:define name="content">
+			<div class="content-home">	
+			    <div class="right-panel">        
+			        <div class="learning-center-container lccontainer">
+			         <h2>learning center</h2>
+			
+			            <div class="icon-area areatop">
+			                <ul class="icons-list">
+			                        <li class="gs bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=getting_0">Getting
+			                                Started</a>
+			                        </li>
+			                        <li class="nt bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=number_0">Number
+			                                Transfer</a>
+			                        </li>
+			                        <li class="cq bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=call_0">Call
+			                                Quality</a>
+			                        </li>
+			                        <li class="cs bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=settings_21">Company
+			                                Settings</a>
+			                        </li>
+			                        <li class="ds bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=settings_7">Group
+			                                Settings</a>
+			                        </li>
+			                        <li class="us bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=settings_14">User
+			                                Settings</a>
+			                        </li>
+			                        <li class="fax bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=Faxing_0">Faxing</a>
+			                        </li>
+			                        <li class="dp bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=DeskPhones_0">Phone Devices</a>
+			                        </li>
+			                        <li class="clearBoth">&nbsp;</li>
+			    
+			                        <li class="ma bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=SmartphoneApps_0">Mobile
+			                                Apps</a>
+			                        </li>
+			                        <li class="sp bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=Desktop_0">Desktop Apps</a>
+			                        </li>
+			                        <li class="hdvideo bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=TopFeatures_8">HD
+			                                Video Meeting </a>
+			                        </li>
+			                        <li class="con bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=TopFeatures_2" style="width: 84px !important; margin: 0px 17px !important">Conferencing
+			                        </a>
+			                        </li>
+			                        <li class="clearBoth">&nbsp;</li>
+			    
+			                        <li class="sms bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=TopFeatures_1">Business
+			                                SMS </a>
+			                        </li>
+			                        <li class="inte bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=TopFeatures_3">Salesforce
+			                                Integration </a>
+			                        </li>
+			                        <li class="bill bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=Billing_0">Billing</a>
+			                        </li>
+			                        <li class="tf bg"><a href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=TopFeatures_0">Top
+			                                Features</a>
+			                        </li>
+			                    </ul>
+							</div>
+    				</div>
+				</div>
+			    <div class="left-panel switch-left">
+			    	<div class="box-border">
+			        	<h4>MORE RESOURCES</h4>
+			            <ul class="box-links">
+			            	<li><a target="_blank" href="http://www.ringcentral.com/office/phone-system-features.html" class="link-blue">Features Overview</a></li>
+			                <li><a target="_blank" href="http://www.ringcentral.com/resources/learning-center.html#whitepapers" class="link-blue">Whitepapers</a></li>
+			                <li><a target="_blank" href="http://www.ringcentral.com/office/phone-system-faq.html" class="link-blue">Presales FAQs</a></li>
+			                <li><a target="_blank" href="http://marketo.ringcentral.com/customer-success-webinars.html" class="link-blue">Webinars</a></li>
+			                <li><a target="_blank" href="http://www.ringcentral.com/office/roi-calculator/index.html" class="link-blue">ROI Calculator</a></li>
+			                <li><a target="_blank" href="https://blog.ringcentral.com" class="link-blue">Blogs</a></li>
+			            </ul>
+			            <h4>POPULAR TUTORIALS</h4>
+			            <ul class="box-links">
+			            	<li><a target="_blank" href="https://www.youtube.com/watch?v=foTd3e3oiI8" class="link-blue"><i class="fa fa-video-camera"></i>Customer Onboarding</a></li>
+			                <li><a target="_blank" href="http://youtu.be/Bf0zUBvWkiI?rel=0" class="link-blue"><i class="fa fa-video-camera"></i>Interface Overview</a></li>
+			                <li><a target="_blank" href="http://www.youtube.com/watch?v=cV7aRFRoZj8?rel=0" class="link-blue"><i class="fa fa-video-camera"></i>Company Settings</a></li>
+			                <li><a target="_blank" href="http://youtu.be/q5PkpCzAfsQ?rel=0" class="link-blue"><i class="fa fa-video-camera"></i>User Settings</a></li>
+			                <li><a target="_blank" href="https://www.youtube.com/watch?v=Nrcs93D_lp8" class="link-blue"><i class="fa fa-video-camera"></i>Mobile App</a></li>
+			            </ul>
+			            
+			        </div>
+			        
+			        <div class="box-border no-bg">
+			        	<h4>MORE SUPPORT</h4>
+			            <ul class="box-links">
+			            	<li>
+			            		<apex:outputLink target="_blank" styleclass="link-blue" value="https://community.ringcentral.com" rendered="{!isGuestUser}"><i class="icon-community link-blue"></i>Community</apex:outputLink>
+                           		<apex:outputLink target="_blank" styleclass="link-blue" value="http://sp2.ringcentral.com/salesforce8.php?NEXTPAGE=community&EMAIL={!objUser.Email}&FIRSTNAME={!objUser.Name}&SFDCID={!objUser.Id}" rendered="{!!isGuestUser}"><i class="icon-community link-blue"></i>Community</apex:outputLink>			         
+			            	</li>
+			                <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalKnowledgebase?ln=kb&src=3" class="link-blue"><i class="icon-knowledgebase"></i>Knowledgebase</a></li>
+			                <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalGuidesVideos?ln=all&src=3" class="link-blue"><i class="icon-guides-videos"></i>Guides &amp; Videos</a></li>
+			                <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalDownloads?ln=all&src=3" class="link-blue"><i class="icon-downloads"></i>Downloads</a></li>
+			            </ul>
+			        </div>
+			    </div>
+			</div>    
+        </apex:define>
+    </apex:composition>
+</apex:page>

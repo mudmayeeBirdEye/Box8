@@ -1,0 +1,164 @@
+<apex:page sidebar="false" controller="RCSupportControllerHandler"  showHeader="false" standardStylesheets="false" docType="html-5.0">
+
+    <c:RCSystemStatus Text="Customer Support Center" />  
+    <style>
+        .lastUL li {
+            display: inline-table;
+            padding-left: 55px;
+        }
+        .areatop {
+            padding:14px 0 14px 60px!important;
+        }  
+        .boxCls {
+            width:115px !important;
+            margin-right:20px !important;
+            text-align: center;
+            margin-top:15px;
+        }
+        .learning-center-container ul.icons-list li a {
+            padding-top:0px;
+            width:100%;
+            margin:0px;
+        }
+       
+    </style>   
+
+<!--  REPLACING SEARCH CODE WITH SEARCH COMPONENT c:RCSupportPortalSearchcomponent-->
+    <c:RCSupportPortalSearchComponent />
+<!--  -->
+ <apex:form >
+ 	<apex:pageMessages />
+    <div class="search-bar-footer">
+        <div class="search-bar-footerImgContainer">&nbsp;</div>
+    </div>
+    <article class="box top" style=" width: 212px; height: 663px;margin-bottom:0px;padding:2px 20px 0px 24px;" >
+         <h3>WHAT'S NEW</h3>
+         <ul>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8207">Oracle Sales Cloud Integration</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8212">Heads Up Display</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/5541">RingCentral Meetings</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8211">Cost Center Management</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/6546">Templates</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=SmartphoneApps_0">RingCentral Mobile App</a>
+            </li>
+            <li><a
+                href="http://success.ringcentral.com/RCSupportPortalLearningCenter?LCtabId=getting_0">Customer Onboarding Guide</a>
+            </li>
+            <li><a
+                href="http://netstorage.ringcentral.com/guides/quickuserguide.pdf ">Quick Guide for Users</a> 
+            </li>
+             <li><a
+                href="http://success.ringcentral.com/articles/RC_Knowledge_Article/6630">Fax Account Resources</a>
+            </li>
+            <li><a
+                href="http://netstorage.ringcentral.com/documents/release_notes_us_ca.pdf"
+                target="_blank" title="Release Notes"><b>Release Notes</b></a>
+            </li>
+        </ul>
+         
+         
+         
+
+         <h3 style="margin-top: 25px;">POPULAR ARTICLES</h3>
+
+        <ul>
+                <apex:repeat value="{!articleOrderedList}" var="key">
+                  <li><a href="{!mapArticleUrl[key]}">{!key}</a></li>
+             </apex:repeat>
+        </ul>
+
+    </article>
+ 
+    <div class="learning-center-container lccontainer" style="width:682px!important;background:none !important;">
+         <!-- <h2>learning center</h2> -->
+        <div class="icon-area areatop" style="padding:0px !important;border:1px solid rgb(190, 189, 189);border-radius:10px;height:80px;">
+            <ul class="icons-list">
+                <li class="gs bg boxCls" style="background:none;"><i class="fa fa-group fa-3x" style="color:#006699;"></i>
+                	<apex:outputLink target="_blank" value="https://community.ringcentral.com" rendered="{!isGuestUser}">Commuity</apex:outputLink>
+                    <apex:outputLink target="_blank" value="http://sp2.ringcentral.com/salesforce8.php?NEXTPAGE=community&EMAIL={!objUser.Email}&FIRSTNAME={!objUser.Name}&SFDCID={!objUser.Id}" rendered="{!!isGuestUser}">Commnity</apex:outputLink>
+                </li>
+                <li class="nt bg boxCls" style="background:none;"><i class="fa fa-file fa-3x" style="color:#006699;"></i><a 
+                    href="{!$Site.CurrentSiteUrl}RCSupportPortalKnowledgebase?ln=kb">Knowledgebase</a>
+                </li>
+                <li class="cq bg boxCls" style="background:none;"><i class="fa fa-briefcase fa-3x" style="color:#006699;"></i><a 
+                    href="{!$Site.CurrentSiteUrl}RCSupportPortalGuidesVideos?ln=all">Guides &amp; Videos</a>
+                </li>
+                <!--<li class="cs bg boxCls" id="lCenterLinkId" style="background:none;"><i class="fa fa-graduation-cap fa-3x" style="color:#006699;"></i><a 
+                    href="" onClick="setLabelValue('learning_center', '{!$Site.CurrentSiteUrl}', 'learningCenterPage');">Learning Center</a>
+                </li>-->
+                <li class="cs bg boxCls" id="lCenterLinkId" style="background:none;"><i class="fa fa-graduation-cap fa-3x" style="color:#006699;"></i><a 
+                    href="{!$Site.CurrentSiteUrl}RCSupportPortalLCHome?ln=lc" >Learning Center</a>
+                </li>
+                <li class="ds bg boxCls" style="background:none;"><i class="fa fa-download fa-3x" style="color:#006699;"></i><a 
+                    href="{!$Site.CurrentSiteUrl}RCSupportPortalDownloads?ln=all">Downloads</a>
+                </li>
+            </ul> 
+        </div>
+        <div class="flag-bottom learningCenterBottom">
+            <h1>Frequently Asked Questions</h1>
+             <div style="float:left;">   
+                <h1>USERS</h1>
+                <ul>Log in to my account </ul>
+                <ul>Reset my password </ul>
+                <ul>Set up my voicemail greeting</ul>
+                <ul>Set up business hours </ul>
+            </div>
+             <div>   
+                <h1>ADMINISTRATOR</h1>
+                <ul>Log in to my account </ul>
+                <ul>Reset my password </ul>
+                <ul>Set up my voicemail greeting</ul>
+                <ul>Set up business hours </ul>
+            </div>
+        </div>
+    </div>
+   <div style='float: left; margin-left: 26px; width: 100%;'>
+        <article class=" last" style="height:auto;margin-bottom:30px;margin-right:0px;">
+             <h3 style="float: left;">QUICK LINKS</h3>
+
+            <ul class="lastUL">
+                <li><a href="http://www.ringcentral.com/support/images/creditcardauthorizationform.pdf" target="_blank" title="Credit Card Auth Form"> Credit Card Form
+            </a>
+                </li>
+                 <li><a href="http://www.ringcentral.com/webinars" target="_blank" title="Webinars"> Webinars </a>
+                </li>
+                <li>
+                    <!--Changed on 17th March 2014 <a href="http://netstorage.ringcentral.com/guides/professional_office_userguide.pdf" target="_blank" title="Admin Guide">Admin Guide</a> --> 
+                    <a href="http://www.ringcentral.com/office/documentation.html" target="_blank" title="Documentation">Documentation</a>
+                </li>
+                <li>
+                    <!--Changed on 17th March 2014 <a href="http://netstorage.ringcentral.com/guides/office_non-admin_userguide.pdf" target="_blank" title="User Guide">User Guide</a>  --> 
+                    <a href="http://netstorage.ringcentral.com/documents/release_notes_us_ca.pdf" target="_blank" title="Release Notes">Release Notes</a>
+                </li>
+                <!-- <li>
+                    <apex:outputLink rendered="{!if($Site.Name == 'rcsupport2013',true,false)}" target="_blank" value="{!$Site.CurrentSiteUrl}FAXFeatureFAQ" title="Top Fax FAQ">Top Fax FAQ</apex:outputLink>
+                    <apex:outputLink rendered="{!if($Site.Name == 'rcsupportCA2012',true,false)}" target="_blank" value="{!$Site.CurrentSiteUrl}FAXFeatureFAQCA" title="Top Fax FAQ">Top Fax FAQ</apex:outputLink>
+                </li> -->
+               <li><a href="https://developer.ringcentral.com" target="_blank" title="For Developers">For Developers</a>  
+                    <!--<span style="display:block;padding-top: 10px;">
+                    <apex:outputtext rendered="{!IF(((CONTAINS($Site.CurrentSiteUrl,'rcsupportCA2012')) || (CONTAINS($Site.CurrentSiteUrl,'success.ringcentral.ca'))),true,false)}">
+                   <a href="http://www.ringcentral.ca/fax/features/faq.html" target="_blank"  title="For Developers">Fax Faq</a>
+                  </apex:outputtext>
+                    <apex:outputtext rendered="{!IF((!(CONTAINS($Site.CurrentSiteUrl,'rcsupportCA2012')) && !(CONTAINS($Site.CurrentSiteUrl,'success.ringcentral.ca'))),true,false)}">
+                     <a href="{!$Site.CurrentSiteUrl}fax/features/faq.html" target="_blank"  title="For Developers">Fax Faq</a>
+                    </apex:outputtext>
+                 </span>      
+         -->
+                </li>
+                <!--<li><a href="http://help.ringcentral.com/"  target="_blank" title="Classic Support Site">Classic Support Site</a></li>-->
+            </ul>
+        </article>
+    </div>
+    </apex:form>
+</apex:page>

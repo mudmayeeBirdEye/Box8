@@ -1,0 +1,61 @@
+<apex:page sidebar="false" showHeader="false" title="RingCentral Support Portal Knowledgebase" standardStylesheets="false" docType="html-5.0" controller="RCSupportControllerHandler">
+    <apex:composition template="RCSupportPortalHomeTemplate">
+    	<apex:define name="systemstatus">
+          <section class="main-content">
+             <c:RCSystemStatus Text="Knowledgebase" iconcode="icon-knowledgebase" rendered="{!!UKPortal}"/> 
+             <c:RCSystemStatusUK Text="Knowledgebase" rendered="{!UKPortal}" /> 
+          </section>
+        </apex:define>
+        <apex:define name="searchcomponent">
+            <!--  REPLACING SEARCH CODE WITH SEARCH COMPONENT c:RCSupportPortalSearchcomponent-->
+                <c:RCSupportPortalSearchComponent ln="{!ln}" searchtext="Search knowledgebase articles"/>
+            <!--  -->
+        </apex:define>
+        <apex:define name="content">        
+               <div class="content-home">	
+			   	 <div class="right-panel text-article">        
+			        <h2 class="text-28">Popular Articles</h2>
+					<apex:repeat value="{!articleOrderedList}" var="key">	
+						 <p><a href="{!mapArticleUrl[key]}" class="link-blue">{!key}</a>{!BLANKVALUE(mapArticleSummary[key], '<blank>')}</p>
+					</apex:repeat>
+			    </div>
+			    <div class="left-panel switch-left">
+			    	<div class="box-border">
+			        	<h4>NEW ARTICLES</h4>
+			            <ul class="box-links">
+			            	<li><a target="_blank" href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8353" class="link-blue">Adding a RingCentral Global Office Number</a></li>
+			                <li><a target="_blank" href="http://success.ringcentral.com/articles/RC_Knowledge_Article/8404" class="link-blue">Office 365 Integration</a></li>
+			                <li><a target="_blank" href="http://success.ringcentral.com/articles/RC_Knowledge_Article/6748" class="link-blue">Single Sign On</a></li>
+			            </ul>
+			            <h4>LATEST RELEASE NOTES</h4>
+			            <ul class="box-links">
+			            	<li><a target="_blank" href="http://netstorage.ringcentral.com/documents/release_notes_us_ca.pdf" class="link-blue">August 6, 2015</a></li>
+			            </ul>
+			            <h4>MORE WAYS TO LEARN</h4>
+			            <ul class="box-links">
+			            	<li><a href="https://blog.ringcentral.com/category/business-best-practices/" class="link-blue">Blog: Business Best Practices</a></li>
+			                <li><a href="https://blog.ringcentral.com/category/solutions/" class="link-blue">Blog: RingCentral Solutions</a></li>
+			                <li><a target="_blank" href="https://community.ringcentral.com/ringcentral/categories/ringcentral_admin_topics" class="link-blue">Community: FAX</a></li>
+			                <li><a target="_blank" href="https://community.ringcentral.com/ringcentral/categories/ringcentral_admin_topics" class="link-blue">Community: Admin Topics</a></li>
+			                <li><a target="_blank" href="https://community.ringcentral.com/ringcentral/categories/ringcentral_user_topics" class="link-blue">Community: User Topics</a></li>
+			            </ul>
+			            
+			        </div>
+			        
+			        <div class="box-border no-bg">
+			        	<h4>MORE SUPPORT</h4>
+			            <ul class="box-links">
+							<li>
+								<apex:outputLink target="_blank" styleclass="link-blue" value="https://community.ringcentral.com" rendered="{!isGuestUser}"><i class="icon-community link-blue"></i>Community</apex:outputLink>
+                           		<apex:outputLink target="_blank" styleclass="link-blue" value="http://sp2.ringcentral.com/salesforce8.php?NEXTPAGE=community&EMAIL={!objUser.Email}&FIRSTNAME={!objUser.Name}&SFDCID={!objUser.Id}" rendered="{!!isGuestUser}"><i class="icon-community link-blue"></i>Community</apex:outputLink>
+                         	</li>
+                         	<li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalGuidesVideos?ln=all&src=2" class="link-blue"><i class="icon-guides-videos"></i>Guides &amp; Videos</a></li>
+			                <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLCHome?ln=lc&src=2" class="link-blue"><i class="icon-learning-center"></i>Learning Center</a></li>			                
+			                <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalDownloads?ln=all&src=2" class="link-blue"><i class="icon-downloads"></i>Downloads</a></li>
+			            </ul>
+			        </div>
+			    </div>
+			</div>
+        </apex:define>
+    </apex:composition>
+</apex:page>

@@ -1,0 +1,70 @@
+<apex:component >
+	 <apex:attribute name="ln" description="This is the value for the component."
+                    type="String" required="false"/>  
+	<apex:attribute name="searchtext" description="This is the value for the search text value"
+                    type="String" required="false"/>                      
+
+
+	<!-- <style>
+		.bg_search_wrapper section {
+        	padding: 15px 0 15px 0;
+        }
+        .search-bar .search-box {
+        	width: 99.5%;
+        }
+        .search-bar .submit-search {
+        	margin-top: -42px;
+        	top:inherit;
+        }
+        .bg_search_wrapper section {
+        	background: #f6f6f6;
+        }
+        .search-bar .input {
+        	width: 100%;
+        }
+	</style>-->
+<!-- 	<div>
+		<div class="search-bar">
+			<section role="Main search">
+				<div class="search-box">		
+					<form action="{!$Site.CurrentSiteUrl}{!IF($CurrentPage.Name=='RCSupportPortalSearchNew2','RCSupportPortalSearchNew2','RCSupportPortalSearchNew')}">
+						<input type="text" title='Search Support' id='globalSearch1'
+						class="input {!IF(($CurrentPage.parameters.globalquery!='' && $CurrentPage.parameters.globalquery!='Search Support'),'searchTextStyle2','searchTextStyle')}"
+						name="globalquery"
+						value="{!IF(($CurrentPage.parameters.globalquery)=='','Search Support',$CurrentPage.parameters.globalquery)}" />
+						<input type="hidden" value="1" name="start" class="input"
+						title='start' /> <input type="hidden" class="input"
+						name="pagenumber" value="1" />
+						<input type="hidden" class="input"
+						name="ln" value="{!ln}" />
+						<input type="submit"
+						class="submit-search" name="Submit" value=" " />
+					</form>
+				</div>
+			</section>
+		</div>
+	</div> -->
+	<div class="bg_search_wrapper">
+	    <div class="search-bar">
+	        <section role="Main search">
+	        <div class="search-box">
+	            <form action="{!$Site.CurrentSiteUrl}{!IF($CurrentPage.Name=='RCSupportPortalSearchNew2','RCSupportPortalSearchNew2','RCSupportPortalSearchNew')}">
+						<input type="text" placeholder="{!searchtext}" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" title='{!searchtext}' id='globalSearch1'
+						class="input ui-autocomplete-input {!IF(($CurrentPage.parameters.globalquery!='' && $CurrentPage.parameters.globalquery!=searchtext),'searchTextStyle2','searchTextStyle')}"
+						name="globalquery"
+						value="{!IF(($CurrentPage.parameters.globalquery)==''||($CurrentPage.parameters.globalquery)==searchtext,'',$CurrentPage.parameters.globalquery)}" />
+						<input type="hidden" value="1" name="start" class="input"
+						title='start' /> <input type="hidden" class="input"
+						name="pagenumber" value="1" />
+						<input type="hidden" class="input"
+						name="ln" value="{!ln}" />
+						<input type="Submit"
+						class="submit-search" name="Submit" value=" " />
+					</form>
+	        </div>
+	        </section>
+	    </div>
+	</div>
+	
+	
+</apex:component>

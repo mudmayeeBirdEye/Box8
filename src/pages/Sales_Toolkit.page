@@ -1,0 +1,84 @@
+<apex:page standardController="Sales_Toolkit__c" tabStyle="Sales_Toolkit__c">
+
+  <style>
+  .headerRow .TableTitle {
+    background-color: #6699CC !important;
+    background-image: none !important; //This is needed if you want to overwrite the header background
+    color: #CC0000 !important; 
+    font-size:100% !important;  
+      }
+  </style>
+
+<apex:sectionHeader title="SALES TOOLKIT" />
+
+  <apex:form >  
+      <apex:pageBlock Title="{!Sales_Toolkit__c.Name}">
+        <apex:pageBlockButtons >
+          <apex:commandButton value="Edit" action="{!edit}"/>
+          <apex:commandButton value="Back to List" action="{!list}"/>
+        </apex:pageBlockButtons>
+              
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">           
+             <apex:column width="60%" style="vertical-align:Top; height:20" value="{!Sales_Toolkit__c.Introduction__c}" headerClass="TableTitle"/>                   
+          </apex:pageBlockTable>     
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.CX_Contact_Information__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Determine_Driver_s__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Current_System_Setup__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Needs__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Timeframe__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Contract__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Company_Size__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Decision_Maker__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Industry__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Identify_and_Position_Upsell_Opportuniti__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Confirm_Any_Deal_Breakers__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Assure_the_CX_that_RC_is_the_right_Solut__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Build_Value_in_Implementations__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+          <apex:pageBlockTable value="{!Sales_Toolkit__c}" var="Subject">  
+              <apex:column width="60%" style="vertical-align:Top;height:20" value="{!Sales_Toolkit__c.Ask_for_the_Bus_Create_Sense_of_Urgency__c}" headerClass="TableTitle"/>
+          </apex:pageBlockTable>
+          
+      </apex:pageBlock>
+    </apex:form>
+  
+</apex:page>

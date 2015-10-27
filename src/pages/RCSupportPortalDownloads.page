@@ -1,0 +1,114 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false" title="RingCentral Support Portal Downloads" docType="html-5.0" controller="RCSupportControllerHandler">
+    <apex:composition template="RCSupportPortalHomeTemplate">
+         <apex:define name="systemstatus">
+          <section class="main-content">
+            <c:RCSystemStatus Text="Downloads" iconcode="icon-downloads" rendered="{!!UKPortal}"/>
+            <c:RCSystemStatusUK Text="Downloads" rendered="{!UKPortal}"/>
+          </section>  
+        </apex:define>
+        <apex:define name="content">
+        	<div class="content-home">	
+			    <div class="right-panel">       
+			        <div class="table-structure text-16">
+			        	<div class="row">
+			            	<div class="col">
+			                	<span class="text-20">Software for Your Desktop</span>
+			                </div>
+			                <div class="col">
+			                	<i class="fa fa-windows windows-blue"></i>For PC
+			                </div>
+			                <div class="col">
+			                	<i class="fa fa-apple"></i>For Mac
+			                </div>
+			            </div>
+			            <div class="row">
+			            	<div class="col">
+			                	RingCentral for Desktop
+			                </div>
+			                <div class="col">
+			                	<a href="http://downloads.ringcentral.com/sp/RingCentralForWindows?v=7.4.0.2103" class="link-blue"><i class="fa fa-download"></i>Download for PC</a><br />
+<!-- 			                    <span class="pad-left-29"><a href="#" class="link-blue">Email link</a> | <a href="#" class="link-blue">Text link</a></span> -->
+			                </div>
+			                <div class="col">
+			                	<a href="http://downloads.ringcentral.com/sp/RingCentralForMac?v=7.4.0.2103" class="link-blue"><i class="fa fa-download"></i>Download for MAC</a><br />
+<!-- 			                    <span class="pad-left-29"><a href="#" class="link-blue">Email link</a> | <a href="#" class="link-blue">Text link</a></span> -->
+								 </div>
+			            </div>
+			            <div class="row">
+			            	<div class="col">
+			                	RingCentral Meeting
+			                </div>
+			                <div class="col">
+			                	<a href=" http://dn.ringcentral.com/data/web/download/RCMeetings/1210/RCMeetingsClientSetup.exe" class="link-blue"><i class="fa fa-download"></i>Download for PC</a><br />
+<!-- 			                    <span class="pad-left-29"><a href="#" class="link-blue">Email link</a> | <a href="#" class="link-blue">Text link</a></span> -->
+			                </div>
+			                <div class="col">
+			                	<a href="http://dn.ringcentral.com/data/web/download/RCMeetings/1210/RCMeetingsClientSetup.pkg" class="link-blue"><i class="fa fa-download"></i>Download for MAC</a><br />
+<!-- 			                    <span class="pad-left-29"><a href="#" class="link-blue">Email link</a> | <a href="#" class="link-blue">Text link</a></span> -->
+			                </div>
+			            </div>            
+			        </div>
+			        <br /><br />
+			        <div class="table-structure text-16">           
+			            <div class="row">
+			            	<div class="col">
+			                	<span class="text-20">Mobile Apps</span>
+			                </div>
+			                <div class="col">
+			                	<i class="fa fa-apple"></i>For iPhone / iPad
+			                </div>
+			                <div class="col">
+			                	<i class="google-play-icon"></i>For Android
+			                </div>
+			            </div>
+			            <div class="row">
+			            	<div class="col">
+			                	RingCentral Mobile Apps
+			                </div>
+			                <div class="col">
+			                	<a target="_blank" href="https://itunes.apple.com/us/app/ringcentral-mobile/id293305984"><img src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/images/download-app-store.png')}" width="150" /></a>
+<!-- 			                	<div class="left-clear"><a href="#" class="link-blue">Email link</a> | <a href="#" class="link-blue">Text link</a></div> -->
+			                </div>
+			                <div class="col">
+			                	<a target="_blank" href="https://play.google.com/store/apps/details?id=com.ringcentral.android"><img src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/images/download-google-play.png')}" width="150" /></a>
+<!-- 			                	<div class="left-clear"><a href="#" class="link-blue">Email link</a> | <a href="#" class="link-blue">Text link</a></div> -->
+			                </div>
+			            </div>
+			            <div class="row">
+			            	<div class="col">
+			                	RingCentral Meeting Mobile Apps
+			                </div>
+			                <div class="col">
+			                	<a target="_blank" href="https://itunes.apple.com/us/app/ringcentral-mobile/id293305984"><img src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/images/download-app-store.png')}" width="150"/></a>
+<!-- 			                	<div class="left-clear"><a href="#" class="link-blue">Email link</a> | <a href="#" class="link-blue">Text link</a></div> -->
+			                </div>
+			                <div class="col">
+			                	<a target="_blank" href="https://play.google.com/store/apps/details?id=com.ringcentral.android"><img src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/images/download-google-play.png')}" width="150"/></a>
+<!-- 			                	<div class="left-clear"><a href="#" class="link-blue">Email link</a> | <a href="#" class="link-blue">Text link</a></div> -->
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			    <div class="left-panel switch-left">
+			    	<div class="box-border">
+			        	<h2>Software Integrations</h2>
+			            <p>Bring RingCentral into the applications you use every day.</p>
+			            <a target="_blank" href="https://developer.ringcentral.com/app-gallery.html#/apps" class="link-blue">App Gallery</a>
+			        </div>
+			        <div class="box-border no-bg">
+			        	<h4>MORE SUPPORT</h4>
+			            <ul class="box-links">
+			            	<li>
+			            		<apex:outputLink target="_blank" styleclass="link-blue" value="https://community.ringcentral.com" rendered="{!isGuestUser}"><i class="icon-community link-blue"></i>Community</apex:outputLink>
+                           		<apex:outputLink target="_blank" styleclass="link-blue" value="http://sp2.ringcentral.com/salesforce8.php?NEXTPAGE=community&EMAIL={!objUser.Email}&FIRSTNAME={!objUser.Name}&SFDCID={!objUser.Id}" rendered="{!!isGuestUser}"><i class="icon-community link-blue"></i>Community</apex:outputLink>			         
+			            	</li>
+			                <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalKnowledgebase?ln=kb&src=5" class="link-blue"><i class="icon-knowledgebase"></i>Knowledgebase</a></li>
+			                <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalGuidesVideos?ln=all&src=5" class="link-blue"><i class="icon-guides-videos"></i>Guides &amp; Videos</a></li>
+			                <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLCHome?ln=lc&src=5" class="link-blue"><i class="icon-learning-center"></i>Learning Center</a></li>			                
+			            </ul>
+			        </div>
+			    </div>
+			</div> 
+        </apex:define>
+    </apex:composition>
+</apex:page>

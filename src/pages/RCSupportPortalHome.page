@@ -1,0 +1,18 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false" docType="html-5.0" controller="RCSupportControllerHandler">
+  <apex:composition template="RCSupportPortalHomeTemplate">
+      <apex:define name="systemstatus">
+          <section class="main-content">
+            <c:RCSystemStatus Text="Customer Care Center" rendered="{!!UKPortal}"/>
+             <c:RCSystemStatusUK Text="Customer Care Center" rendered="{!UKPortal}"/> 
+          </section>  
+        </apex:define>
+        <apex:define name="searchcomponent">
+            <!--  REPLACING SEARCH CODE WITH SEARCH COMPONENT c:RCSupportPortalSearchcomponent-->
+                <c:RCSupportPortalSearchComponent ln="" searchtext="Search all support resources"/> 
+            <!--  -->
+        </apex:define>
+     <apex:define name="content"><apex:pagemessages /> 
+          <apex:include pageName="RCSupportPortalBodyContentUS"/> 
+    </apex:define>
+  </apex:composition>
+</apex:page>

@@ -1,0 +1,361 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false" title="RingCentral Support Portal Guides & Videos" docType="html-5.0" controller="RCSupportControllerHandler">
+    <apex:composition template="RCSupportPortalHomeTemplate">
+     	<apex:define name="systemstatus">
+          <section class="main-content">
+            <c:RCSystemStatus Text="Guides & Videos" iconcode="icon-guides-videos" rendered="{!!UKPortal}"/>
+            <c:RCSystemStatusUK Text="Downloads" rendered="{!UKPortal}"/>
+          </section>  
+        </apex:define>
+        <apex:define name="searchcomponent">
+            <!--  REPLACING SEARCH CODE WITH SEARCH COMPONENT c:RCSupportPortalSearchcomponent-->
+                <c:RCSupportPortalSearchComponent ln="{!ln}" searchtext="Search all support resources"/>
+            <!--  -->
+        </apex:define>
+        <apex:define name="content">
+			<div class="content-home">	
+			    <div class="right-panel">
+			    	<!-- <div class="row-100 support-videos">
+			            <h2 class="text-28">Support Videos</h2> 
+			            <ul>
+			                <li><a href="#"><i class="play-icon"></i></a><span>User Settings</span></li>
+			                <li><a href="#"><i class="play-icon"></i></a><span>Company Settings</span></li>
+			                <li><a href="#"><i class="play-icon"></i></a><span>Smartphone Apps Overview</span></li>
+			                <li><a href="#"><i class="play-icon"></i></a><span>RingCentral Conferencing</span></li>
+			                <li><a href="#"><i class="play-icon"></i></a><span>Outbound Fax Settings Overview</span></li>
+			            </ul>
+			            <div class="more-videos">
+			            	<a href="#">
+			                	<span><i class="fa fa-th-large"></i>See more videos</span>
+			                </a>	
+			            </div>
+			        </div> -->
+			         
+			        <div class="row-100 support-videos">
+			            <h2 class="text-28">Support Videos</h2> 
+			            <ul class="paginate gallery">
+			                <li>			                	
+								<a href="https://youtu.be/q5PkpCzAfsQ" rel="prettyPhoto">
+									<img alt="User Settings" src="http://i1.ytimg.com/vi/q5PkpCzAfsQ/mqdefault.jpg" title="User Settings"/>
+                                    <i class="play-icon"></i>
+                                </a><span>User Settings</span>
+							</li>
+			                <li>
+			                	<a href="https://youtu.be/cV7aRFRoZj8" rel="prettyPhoto">
+			                		<img alt="Company Settings" src="http://i1.ytimg.com/vi/cV7aRFRoZj8/mqdefault.jpg" title="Company Settings"/>
+			                		<i class="play-icon"></i>
+		                		</a><span>Company Settings</span>
+	                		</li>
+			                <li>
+			                	<a href="http://youtu.be/BuWig_HM3Rk" rel="prettyPhoto">
+			                		<img alt="RC Meetings" src="http://i1.ytimg.com/vi/BuWig_HM3Rk/mqdefault.jpg" title="RC Meetings"/>
+			                		<i class="play-icon"></i>
+		                		</a><span>RC Meetings</span>
+	                		</li>
+			                <li>
+			                	<a href="http://youtu.be/VbaXBqSnjX8" rel="prettyPhoto">
+			                		<img alt="Desktop app" src="http://i1.ytimg.com/vi/VbaXBqSnjX8/mqdefault.jpg" title="Desktop app"/>
+			                		<i class="play-icon"></i>
+		                		</a><span>Desktop app</span>
+	                		</li>
+			                <li>
+			                	<a href="https://youtu.be/ePGXeFy5_Jc" rel="prettyPhoto">
+			                		<img alt="Google Integration" src="http://i1.ytimg.com/vi/ePGXeFy5_Jc/mqdefault.jpg" title="Google Integration"/>
+			                		<i class="play-icon"></i>
+		                		</a><span>Google Integration</span>
+	                		</li>
+			            </ul> <br/>
+						<div class="support-videos more-support-videos">
+							<ul class="paginate gallery">
+								<li>
+									<a href="https://youtu.be/w5Y7jcB6GRk" rel="prettyPhoto">
+										<img alt="RingCentral Business SMS" src="http://i1.ytimg.com/vi/w5Y7jcB6GRk/mqdefault.jpg" title="RingCentral Business SMS"/>
+										<i class="play-icon"></i>
+									</a><span>RingCentral Business SMS</span>
+								</li>
+								<li>
+									<a href="https://youtu.be/B4quDN150X4" rel="prettyPhoto">
+										<img alt="RingCentral Conferencing" src="http://i1.ytimg.com/vi/B4quDN150X4/mqdefault.jpg" title="RingCentral Conferencing"/>
+										<i class="play-icon"></i>
+									</a><span>RingCentral Conferencing</span>
+								</li>
+								<li>
+									<a href="https://youtu.be/_zWGe6DU3iM" rel="prettyPhoto">
+										<img alt="RingCentral Ease of Management" src="http://i1.ytimg.com/vi/_zWGe6DU3iM/mqdefault.jpg" title="RingCentral Ease of Management"/>
+										<i class="play-icon"></i>
+									</a><span>RingCentral Ease of Management</span>
+								</li>
+								<li>								
+									<a href="https://youtu.be/9B5cudlpe24" rel="prettyPhoto">
+										<img alt="How to Transfer a Number" src="http://i1.ytimg.com/vi/9B5cudlpe24/mqdefault.jpg" title="How to Transfer a Number"/>
+										<i class="play-icon"></i>
+									</a><span>How to Transfer a Number</span>
+								</li>
+								<li>
+									<a href="https://youtu.be/aEL5qvPWqrI" rel="prettyPhoto">
+										<img alt="Departments overview" src="http://i1.ytimg.com/vi/aEL5qvPWqrI/mqdefault.jpg" title="Departments overview"/>
+										<i class="play-icon"></i>
+									</a><span>Departments overview</span>
+								</li>
+								<li>
+									<a href="https://youtu.be/JPIQ-dAV7NY" rel="prettyPhoto">
+										<img alt="Outbound Fax Settings Overview" src="http://i1.ytimg.com/vi/JPIQ-dAV7NY/mqdefault.jpg" title="Outbound Fax Settings Overview"/>
+										<i class="play-icon"></i>
+									</a><span>Outbound Fax Settings Overview</span>
+								</li>
+								<li>
+									<a href="https://youtu.be/2dC0pkJ35M0" rel="prettyPhoto">
+										<img alt="Smartphone Apps Overview" src="http://i1.ytimg.com/vi/2dC0pkJ35M0/mqdefault.jpg" title="Smartphone Apps Overview"/>
+										<i class="play-icon"></i>
+									</a><span>Smartphone Apps Overview</span>
+								</li>
+								<li>
+									<a href="https://youtu.be/pS4q8BGuBw8" rel="prettyPhoto">
+										<img alt="Billing Overview" src="http://i1.ytimg.com/vi/pS4q8BGuBw8/mqdefault.jpg" title="Billing Overview"/>
+										<i class="play-icon"></i>
+									</a><span>Billing Overview</span>
+								</li>
+							</ul>
+						</div>
+			            <div class="more-videos" id="more-videos">
+			            	<a href="javascript:void(0)">
+			                	<span><i class="fa fa-th-large"></i>See more videos</span>
+			                </a>	
+			            </div>
+						<div class="more-videos" Id="lessVideo">
+			            	<a href="javascript:void(0)">
+			                	<span><i class="fa fa-th-large"></i>See less videos</span>
+			                </a>	
+			            </div>
+			        </div>
+			            
+			        <h2 class="text-28">RingCentral Guides</h2>
+			       		<div class="row-100">
+			            <div class="col-50">
+			                <h3 class="faq-head">FOR USERS</h3>
+			                <ul class="faq-list">
+			                	<li><a target="_blank" href="http://netstorage.ringcentral.com/guides/office_user_guide.pdf"
+			                		title="This 57-page guide helps users set up and access 17 user functions and features in RingCentral for Office, and provides instructions on user settings.">
+			                		<i class="fa fa-file"></i>RingCentral Office User Guide
+			                		</a>
+		                		</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/quickuserguide.pdf"
+			                    	title="In this 5-page guide learn basic use of VoIP desk phones, RingCentral for iOS/Android, RingCentral Meetings, and RingCentral for Desktop.">
+			                    	<i class="fa fa-file"></i>User QuickStart Guide
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/rc_for_desktop_user_guide.pdf"
+			                    	title="This 42-page guide for users covers installation, login, contacts, favorites, Presence, placing a call, answering a call, messages, conference calls, online meetings, faxes, activity records, personalizing, integrating with Microsoft Outlook and Mac Address Book, and Heads Up Display.">
+			                    	<i class="fa fa-file"></i>RingCentral for Desktop User Guide
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/desktop_quick_reference_guide.pdf"
+			                    	title="In this 3-page guide covers download and installation of the app, a tour of the app, feature highlights, and system requirements.">
+			                    	<i class="fa fa-file"></i>RingCentral for Desktop Quick Reference Guide
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/mobile_app_guide.pdf"
+			                    	title="This 84-page describes functions and features of the RingCentral Mobile App, and provides instructions on admin and user settings.">
+			                    	<i class="fa fa-file"></i>RingCentral Mobile App Guide
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/softphone_quickstart_guide.pdf"
+			                    	title="This 3-page guide is for the legacy Softphone product, not RingCentral for Desktop. It covers how to download and sign in to your RingCentral softphone, softphone features, tips for best voice quality, and troubleshooting your RingCentral softphone.">
+			                    	<i class="fa fa-file"></i>Softphone Quick Reference Guide
+			                    	</a>
+			                    </li>
+			                </ul>
+			                <h3 class="faq-head">FEATURES</h3>
+			                <ul class="faq-list">
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/fax_quick_start_guide.pdf"
+			                    	title="This 3-page guide covers getting started with RingCentral fax, and sending and receiving faxes.">
+			                    	<i class="fa fa-file"></i>Fax QuickStart Guide
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/meetings_user_guide.pdf"
+			                    	title="This 35-page guide helps users set up, schedule, host and join RingCentral Online Meetings; and it covers system requirements.">
+			                    	<i class="fa fa-file"></i>RingCentral Meetings User Guide
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/meetings_quickstart_guide.pdf"
+			                    	title="This 5-page guide covers how to download, install, and start RingCentral Meetings; and it overviews the functions of HD video conference and Web meetings.">
+			                    	<i class="fa fa-file"></i>RingCentral Meetings Quickstart Guide
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/google_user_guide.pdf"
+			                    	title="This 37-page guide for users covers installation, login, options, application authorization, dialer, outbound and incoming calls, messages, contacts, call log and details, RingCentral Conference and Meetings, hangouts, and troubleshooting RingCentral for Google.">
+			                    	<i class="fa fa-file"></i>RingCentral for Google User Guide
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/fax_google_guide.pdf"
+			                    	title="This 13-page document for users covers how to add the RingCentral application to your Google Docs, and how to use the application">
+			                    	<i class="fa fa-file"></i>RingCentral Fax for Google Docs User Guide
+			                    	</a>
+		                    	</li>			                                       
+			                </ul>                
+			            </div>
+			            <div class="col-50">
+			            	<h3 class="faq-head">FOR ADMINISTRATORS</h3>
+			                <ul class="faq-list">
+			                	<li><a target="_blank" href="http://netstorage.ringcentral.com/guides/office_admin_guide.pdf"
+			                		title="This 147-page guide helps RingCentral Office administrators set up and configure the RingCentral system, and manage its overall functions.">
+			                		<i class="fa fa-file"></i>RingCentral Office Admin Guide
+			                		</a>
+		                		</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/admin_user_quickstart_guide.pdf"
+			                    	title="This 3-page guide covers how to set up your IP phone, administer your RingCentral phone system, integrate applications with RingCentral, transfer your existing phone numbers, choose a router, and the RingCentral Customer Support Center.">
+			                    	<i class="fa fa-file"></i>Admin QuickStart Guide
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/onboarding_guide_2to9_users.pdf"
+			                    	title="This 10-page guide covers the onboarding process in six steps:  network readiness, implementation, number transfer, product features, additional resources, and voice of the customer program.">
+			                    	<i class="fa fa-file"></i>Onboarding Guide for 2-9 Users
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/onboarding_guide_10to99_users.pdf"
+			                    	title="This 11-page guide covers the onboarding process:  network readiness, introduction to networking for VoIP, your network components, implementation, number transfer, product features, additional resources, and voice of the customer program.">
+			                    	<i class="fa fa-file"></i>Onboarding Guide for 10-99 Users
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/onboarding_guide_100plus_users.pdf"
+			                    	title="This 11-page guide covers the onboarding process:  network readiness, getting help with network readiness, introduction to networking for VoIP, your network components, implementation, number transfer, product features, additional resources, and voice of the customer program.">
+			                    	<i class="fa fa-file"></i>Onboarding Guide for 100+ Users
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/router_configuration_guide.pdf"
+			                    	title="This 29-page guide helps Administrators to configure their local network to function most efficiently with RingCentral, enabling the best voice quality for all users.">
+			                    	<i class="fa fa-file"></i>Router Configuration Guide
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/auto-receptionist_guide.pdf"
+			                    	title="In this 1-page guide learn how to login, set up, test and publish the RingCentral Auto-Receptionist to answer calls for your business.">
+			                    	<i class="fa fa-file"></i>Auto-Receptionist QuickStart Guide
+			                    	</a>
+		                    	</li>			                    
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/it_buyers_guide.pdf"
+			                    	title="This 5-page guide addresses the major concerns of IT managers and consultants when evaluating a VoIP system, including ease of deployment, reliability, and user requirements.">
+			                    	<i class="fa fa-file"></i>IT Buyer's Guide
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/datasheets/office_datasheet.pdf"
+			                    	title="This 2-page datasheet compares the features and costs of RingCentral Office to traditional on-premise PBX systems.">
+			                    	<i class="fa fa-file"></i>RingCentral Office Datasheet
+			                    	</a>
+		                    	</li>
+			                    <li><a target="_blank" href="http://netstorage.ringcentral.com/documents/release_notes_us_ca.pdf"
+			                    	title="Release notes provide an overview of the new and improved features in the latest software update.">
+			                    	<i class="fa fa-file"></i>RingCentral Release Notes
+			                    	</a>
+		                    	</li>
+			                </ul>			                
+			                                                 
+			            </div>
+			        </div>
+			        <div class="row-100">
+		        	<h3 class="faq-head">RINGCENTRAL INTEGRATIONS GUIDES</h3>
+		            <div class="faq-table">
+		                <ul class="faq-list">
+		                    <li><i class="fa fa-file"></i>RingCentral for Zendesk</li>
+		                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/zendesk_adminguide.pdf" 
+		                    	title="This 15-page guide covers admin functions for integrating RingCentral functionality into your installation of Zendesk.">
+		                    	Admin Guide</a>
+		                    </li>
+		                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/zendesk_userguide.pdf" title="This 15-page guide covers user basics for RingCentral for Zendesk.">
+		                    User Guide</a>
+	                    	</li>
+		                </ul>
+		                <ul class="faq-list">
+		                    <li><i class="fa fa-file"></i>RingCentral for Salesforce</li>
+		                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/sfdc_admin_guide.pdf" title="This 8-page guide covers admin functions for integrating RingCentral functionality into your installation of Salesforce.">
+		                    Admin Guide</a>
+	                    	</li>
+		                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/sfdc_user_guide.pdf" title="This 10-page guide covers user basics for RingCentral for Salesforce.">
+		                    User Guide</a>
+	                    	</li>
+		                </ul>
+		                <ul class="faq-list">
+		                    <li><i class="fa fa-file"></i>RingCentral for Oracle SalesCloud</li>
+		                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/ringcentral_for_oracle_sales_cloud_adminguide.pdf" title ="This 10-page guide covers admin functions for integrating RingCentral functionality into your installation of Oracle Sales Cloud.">
+		                    Admin Guide</a>
+	                    	</li>
+		                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/ringcentral_for_oracle_sales_userguide.pdf" title="This 10-page guide covers user basics for RingCentral for Oracle Sales.">
+		                    User Guide</a>
+	                    	</li>
+		                </ul>
+		                <ul class="faq-list">
+		                    <li><i class="fa fa-file"></i>RingCentral for Desk</li>
+		                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/desk_admin_guide.pdf" title="This 9-page guide covers admin functions for integrating RingCentral functionality into your installation of Desk.com.">
+		                    Admin Guide</a>
+	                    	</li>
+		                    <li><a target="_blank" href="http://netstorage.ringcentral.com/guides/desk_user_guide.pdf" title="This 13-page guide covers user basics for RingCentral for Desk.com.">
+		                    User Guide</a>
+	                    	</li>
+		                </ul>
+   		            </div>	
+		        </div>
+			    </div>
+			    <div class="left-panel switch-left">
+			    	<div class="box-border">
+			        	<h4>NEW FEATURES</h4>
+			            <ul class="box-links">
+			            	<li><a target="_blank" href="http://marketo.ringcentral.com/rcmeeting.html" class="link-blue">RingCentral Meetings</a></li>
+			                <li><a target="_blank" href="http://marketo.ringcentral.com/ringcentralfordesktop" class="link-blue">RingCentral for Desktop</a></li>
+			                <li><a target="_blank" href="http://marketo.ringcentral.com/ringcentralforgoogle" class="link-blue">RingCentral for Google</a></li>
+			                <li><a target="_blank" href="http://marketo.ringcentral.com/ringcentralforoffice365" class="link-blue">RingCentral for Office 365</a></li>
+			            </ul>
+			            <h4>PRODUCT INFORMATION</h4>
+			            <ul class="box-links">
+			            	<li><a target="_blank" href="http://www.ringcentral.com/office/phone-system-features.html" class="link-blue">Features Overview</a></li>
+			                <li><a target="_blank" href="http://www.ringcentral.com/resources/learning-center.html#whitepapers" class="link-blue">Whitepapers</a></li>
+			                <li><a target="_blank" href="http://www.ringcentral.com/office/phone-system-faq.html" class="link-blue">Presales FAQ's</a></li>
+			                <li><a target="_blank" href="http://marketo.ringcentral.com/customer-success-webinars.html" class="link-blue">Webinars</a></li>
+			                <li><a target="_blank" href="https://blog.ringcentral.com" class="link-blue">Blogs</a></li>
+			            </ul>
+			            
+			        </div>
+			        
+			        <div class="box-border no-bdr">
+			        	<div class="table-row">
+			            	<div class="table-col">
+			                	<img src="{!URLFOR($Resource.RCSupportPortal, 'supportPortal/images/pdf-img.jpg')}" />
+			                </div>
+			                <div class="table-col pad-left-10">
+			                	<small>August 2015</small><br />
+			                    Contact Centers Must Go Digital or Die....<br /><br />
+			                    <small><a target="_blank" href="http://marketo.ringcentral.com/contact-center-wp.html" class="link-blue">Download PDF</a></small>
+			                </div>	
+			            </div>
+			        </div>
+			        
+			        <div class="box-border no-bg">
+			        	<h4>MORE SUPPORT</h4>
+			            <ul class="box-links">
+			            	<li>
+			            		<apex:outputLink target="_blank" styleclass="link-blue" value="https://community.ringcentral.com" rendered="{!isGuestUser}"><i class="icon-community link-blue"></i>Community</apex:outputLink>
+                           		<apex:outputLink styleclass="link-blue" value="http://sp2.ringcentral.com/salesforce8.php?NEXTPAGE=community&EMAIL={!objUser.Email}&FIRSTNAME={!objUser.Name}&SFDCID={!objUser.Id}" rendered="{!!isGuestUser}"><i class="icon-community link-blue"></i>Community</apex:outputLink>			            		
+			            	</li>
+			                <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalKnowledgebase?ln=kb&src=4" class="link-blue"><i class="icon-knowledgebase"></i>Knowledgebase</a></li>
+			                <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalLCHome?ln=lc&src=4" class="link-blue"><i class="icon-learning-center"></i>Learning Center</a></li>
+			                <li><a href="{!$Site.CurrentSiteUrl}RCSupportPortalDownloads?ln=all&src=4" class="link-blue"><i class="icon-downloads"></i>Downloads</a></li>
+			            </ul>
+			        </div>
+			    </div>
+			</div>    
+        </apex:define>
+    </apex:composition>
+    <script>
+		$(document).ready(function () {
+			$("#lessVideo").fadeOut();
+			$(".more-support-videos").fadeOut();
+			$("#more-videos").click(function(){
+				$(".more-support-videos").fadeIn(1000);
+				$("#more-videos").fadeOut();
+				$("#lessVideo").fadeIn();
+			});
+			$("#lessVideo").click(function(){
+				$(".more-support-videos").fadeOut(1000);
+				$("#more-videos").fadeIn();
+				$("#lessVideo").fadeOut();
+			});
+		});
+	</script>
+</apex:page>
