@@ -11,6 +11,7 @@ public class AccInfo {
     //Commit 2 Box 8
     //Commit 3
     //commit 4
+	//5
     public String imgPath{get;set;}
     public String msg{get;set;}
     public String salsAgreeDate{get;set;}
