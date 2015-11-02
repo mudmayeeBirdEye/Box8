@@ -5,6 +5,7 @@
     <sf:deploy
             username=${username}
             password=${password}
+			maxPoll=${maxPoll}
             serverurl=${serverurl}
 			deployRoot=${deployroot}            
   </target>
