@@ -12,6 +12,7 @@ public class AccInfo {
     //Commit 3
     //commit 4
 	//5
+	//test hook
     public String imgPath{get;set;}
     public String msg{get;set;}
     public String salsAgreeDate{get;set;}
