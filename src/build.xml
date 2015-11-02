@@ -7,7 +7,7 @@
             password="${password}"
 			maxPoll="${maxPoll}"
             serverurl="${serverurl}"
-			deployRoot="mypkg"            
+			deployRoot="mypkg"   />         
   </target>
  <!-- <target name="retrieve">
       <sf:retrieve username="m.chaturvedi@simplion.com.box8"
