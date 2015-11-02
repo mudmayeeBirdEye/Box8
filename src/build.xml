@@ -6,7 +6,7 @@
             username="m.chaturvedi@simplion.com.ci"
             password="verity106TAo9JmRYBx9cE0G62cDn6kq"
             serverurl="test.salesforce.com"
-			deployRoot="C:/Program Files (x86)/Jenkins/jobs/Git Integration Test Project/workspace/src"
+			deployRoot="src"
             runAllTests="true" />
   </target>
  <!-- <target name="retrieve">
