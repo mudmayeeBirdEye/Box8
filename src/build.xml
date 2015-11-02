@@ -3,11 +3,11 @@
     <property environment="env"/>-->
   <target name="Deploy">
     <sf:deploy
-            username=${username}
-            password=${password}
-			maxPoll=${maxPoll}
-            serverurl=${serverurl}
-			deployRoot=${deployroot}            
+            username="${username}"
+            password="${password}"
+			maxPoll="${maxPoll}"
+            serverurl="${serverurl}"
+			deployRoot="mypkg"            
   </target>
  <!-- <target name="retrieve">
       <sf:retrieve username="m.chaturvedi@simplion.com.box8"
