@@ -17,7 +17,7 @@ public class AccInfo {
 	//changing to sh
 	//changing to no ext
 	//changed the config
-	//TESTING
+	//TESTING12
     public String imgPath{get;set;}
     public String msg{get;set;}
     public String salsAgreeDate{get;set;}
