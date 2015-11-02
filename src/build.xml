@@ -1,16 +1,16 @@
 <project name="Box8" default="retrieve" basedir="." xmlns:sf="antlib:com.salesforce">
    <!-- <property file="build.properties"/>
     <property environment="env"/>-->
-  <target name="Deploy">
+  <!--<target name="Deploy">
     <sf:deploy
             username="${username}"
             password="${password}"
 			maxPoll="${maxPoll}"
             serverurl="${serverurl}"
 			deployRoot="mypkg"   />         
-  </target>
+  </target>-->
   <target name="deployUnpackaged">
-	<sf:deploy username="${username}" password="${password}"  maxPoll="${maxPoll}" deployRoot="${deployroot}" runAllTests="false" logType="Debugonly" rollbackOnError="false"/>
+	<sf:deploy username="${username}" password="${password}" maxPoll="${maxPoll}" serverurl="${serverurl}" deployRoot="${deployroot}" runAllTests="false" logType="Debugonly" rollbackOnError="false"/>
   </target>
  <!-- <target name="retrieve">
       <sf:retrieve username="m.chaturvedi@simplion.com.box8"
