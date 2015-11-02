@@ -15,6 +15,7 @@ public class AccInfo {
 	//test hook
 	//more hook test
 	//changing to sh
+	//changing to no ext
     public String imgPath{get;set;}
     public String msg{get;set;}
     public String salsAgreeDate{get;set;}
