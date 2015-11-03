@@ -19,6 +19,7 @@ public class AccInfo {
 	//changed the config
 	//TESTING12
 	//new new
+	//More test
     public String imgPath{get;set;}
     public String msg{get;set;}
     public String salsAgreeDate{get;set;}
