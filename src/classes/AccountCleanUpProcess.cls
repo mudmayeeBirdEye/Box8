@@ -10,7 +10,7 @@
  **************************************************************************************************/
 
 public with sharing class AccountCleanUpProcess {
-	
+	//lets test 1 more time
 	/*****************************************************************************
 	 * @Description - List of the accounts, associated to partner ids only.      * 
 	 * @params Map<Id, Account>, Map<Id,Contact>                                 *
