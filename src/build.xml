@@ -10,7 +10,7 @@
 			deployRoot="mypkg"   />         
   </target>-->
   <target name="deployUnpackaged">
-	<sf:deploy username="${username}" password="${password}" maxPoll="${maxPoll}" serverurl="${serverurl}" deployRoot="${deployroot}" runAllTests="false" logType="Debugonly" rollbackOnError="false"/>
+	<sf:deploy username="${username}" password="${password}" maxPoll="${maxPoll}" serverurl="${serverurl}" deployRoot="${deployroot}" runAllTests="false" logType="Debugonly" rollbackOnError="false" pollWaitMillis="600000"/>
   </target>
  <!-- <target name="retrieve">
       <sf:retrieve username="m.chaturvedi@simplion.com.box8"
