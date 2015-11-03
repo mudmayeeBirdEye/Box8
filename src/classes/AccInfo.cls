@@ -21,6 +21,7 @@ public class AccInfo {
 	//new new
 	//More test
 	//by service
+	//testing full process
     public String imgPath{get;set;}
     public String msg{get;set;}
     public String salsAgreeDate{get;set;}
