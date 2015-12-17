@@ -5,6 +5,7 @@ global class AccountHierarchyTerritoryAssignmentBatch implements Database.Batcha
 	public Set<string> employeeSizeSet;
 	public List<Account_Hierarchy__c> accHieListUpdate;
 	String query;
+	//testing workflow
 	
 	global Database.QueryLocator start(Database.BatchableContext BC){
 		/*segmentDataMap = new Map<string,Map<String,String>>();
